@@ -1,0 +1,27 @@
+# Copyright (C) 2026 Nexsteaduser. All rights reserved.
+
+[package]
+name = "tungsten"
+version = "0.2.1"
+edition = "2024"
+authors = ["Tinmc189623 <admin@nexsteaduser.com>"]
+license = "GPL-3.0-or-later"
+description = "Tungsten — Nexlyh 四层特权级架构内核 (x86_64)"
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+debug = true
+lto = "fat"
+opt-level = "z"
+codegen-units = 1
+strip = "symbols"
+panic = "abort"
+overflow-checks = false
+debug-assertions = false
+
+[dependencies]
+limine = "0.6.5"
+lz4_flex = { version = "0.13", default-features = false }
+ruzstd = { version = "0.8.3", default-features = false }

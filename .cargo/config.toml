@@ -1,0 +1,20 @@
+# Copyright (C) 2026 Nexsteaduser. All rights reserved.
+
+[build]
+target = "x86_64-unknown-none"
+
+[target.x86_64-unknown-none]
+rustflags = [
+    "-C", "relocation-model=static",
+    "-C", "code-model=kernel",
+    "-C", "link-arg=-T",
+    "-C", "link-arg=linker.ld",
+    "-C", "link-arg=-nostdlib",
+    "-C", "link-arg=-static",
+    "-C", "link-arg=-z",
+    "-C", "link-arg=nostart-stop-gc",
+]
+
+[unstable]
+build-std = ["core", "alloc", "compiler_builtins"]
+build-std-features = ["compiler-builtins-mem"]
