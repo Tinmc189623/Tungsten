@@ -1,0 +1,10 @@
+# Tungsten 内核 crate — 构建产物
+# Copyright (C) 2026 Nexsteaduser. All rights reserved.
+
+/target/
+**/*.rs.bk
+*.o
+*.a
+*.rlib
+*.bin
+libtungsten_hal.a

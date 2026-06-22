@@ -1,10 +1,13 @@
-# Tungsten 内核 crate — 构建产物
+# Tungsten kernel .gitignore
 # Copyright (C) 2026 Nexsteaduser. All rights reserved.
 
-/target/
-**/*.rs.bk
-*.o
-*.a
-*.rlib
-*.bin
-libtungsten_hal.a
+src/tungsten/target/
+src/tungsten/Cargo.lock
+src/hal/build/
+src/modules/freetype/**/build/
+src/tungsten/*.bin
+src/tungsten/*.rlib
+src/tungsten/*.a
+src/tungsten/*.o
+build/
+*.log

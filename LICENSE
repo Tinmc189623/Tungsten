@@ -18,9 +18,9 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
 
 ---
 
-Tungsten kernel source code in this repository is licensed under GPL v3.
+Tungsten kernel source code is licensed under GPL v3.
 TungstenOS system components are proprietary and closed-source.
-Third-party crates used at build time retain their respective licenses.
+Limine bootloader is licensed under BSD-2-Clause / GPL-3.0-or-later.
 
 Author: Tinmc189623
 Team: Nexlyh

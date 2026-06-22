@@ -1,0 +1,6 @@
+# Tungsten kernel — linguist overrides
+# Copyright (C) 2026 Nexsteaduser. All rights reserved.
+
+*.zig linguist-language=Zig
+src/modules/freetype/** linguist-vendored
+scripts/** linguist-detectable=false
