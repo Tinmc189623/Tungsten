@@ -4,11 +4,11 @@
 
 | 字段 | 值 |
 |------|-----|
-| 内核版本 `KERNEL_VERSION` | **0.2.1** |
-| 内核补丁 `KERNEL_PATCH_VERSION` | KP-20260622-0021-001 |
-| 内核构建日 `KNR_BUILD_DATE` | 20260622 |
+| 内核版本 `KERNEL_VERSION` | **0.2.2** |
+| 内核补丁 `KERNEL_PATCH_VERSION` | KP-20260623-0022-001 |
+| 内核构建日 `KNR_BUILD_DATE` | 20260623 |
 | 关联系统 `OS_VERSION` | 0.2 |
-| 系统补丁 `OS_PATCH_VERSION` | OS-20260622-0021-001 |
+| 系统补丁 `OS_PATCH_VERSION` | OS-20260623-0002-001 |
 | TAPI `API_VERSION` | 0.2 |
 | 官网 | [tungsten-kernel.org](https://tungsten-kernel.org/) |
 
