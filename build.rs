@@ -43,7 +43,9 @@ fn inject_version_from_ver_json(manifest_dir: &PathBuf) {
     let kernel = field("KERNEL_VERSION");
     let os = field("OS_VERSION");
     let api = field("API_VERSION");
-    let knr_date = field("KNR_BUILD_DATE");
+    let kernel_date = json_string_field(&text, "KERNEL_BUILD_DATE")
+        .or_else(|| json_string_field(&text, "KNR_BUILD_DATE"))
+        .unwrap_or_else(|| panic!("ver.json 缺少字段: KERNEL_BUILD_DATE"));
     let os_date = field("OS_BUILD_DATE");
     let knr_patch = field("KERNEL_PATCH_VERSION");
     let os_patch = field("OS_PATCH_VERSION");
@@ -72,7 +74,8 @@ pub const OS_DISPLAY: &str = "TungstenOS v{os}";
 pub const API_VERSION: &str = "{api}";
 pub const KERNEL_PATCH_VERSION: &str = "{knr_patch}";
 pub const OS_PATCH_VERSION: &str = "{os_patch}";
-pub const KNR_BUILD_DATE: &str = "{knr_date}";
+pub const KERNEL_BUILD_DATE: &str = "{kernel_date}";
+pub const KNR_BUILD_DATE: &str = "{kernel_date}";
 pub const OS_BUILD_DATE: &str = "{os_date}";
 "#
     );
